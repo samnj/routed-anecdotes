@@ -49,10 +49,8 @@ const App = () => {
 
   const match = useMatch('/anecdotes/:id')
   const anecdote = match
-    ? anecdotes.find(a => a.id === Number(match.params.id))
+    ? anecdotes.find(a => a.id === match.params.id)
     : null
-
-  console.log(anecdotes)
 
   return (
     <div>
